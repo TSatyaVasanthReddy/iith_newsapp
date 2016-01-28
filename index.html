@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript"> 
+
+function stopRKey(evt) { 
+	
+  var evt = (evt) ? evt : ((event) ? event : null); 
+  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+  if ((evt.keyCode == 13) && (node.type=="text"))  {return false;} 
+} 
+
+document.onkeypress = stopRKey; 
+
+</script>
+
+<body  onKeyPress="return keyPressed(event)">
+
+<h1>IITh NEWS ADMIN</h1>
+<br/>
+<br/>
+
+<form action="action.php" method="post" disabled >
+ <p>Headline: <input type="text" name="headLine"  /></p>
+ <p>Description and Details: <textarea style="height:100px; width:300px" type="text" name="description"> </textarea>
+ </p>
+ <input  name="upfile" type="file" id="fileToUpload"/>
+ <p><input type="submit" value="send data" /></p>
+</form>
+</body>
+</html>
+
+
+
